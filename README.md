@@ -4,7 +4,7 @@ Grogu is an IOT node based on [Thanos](https://github.com/slincastro/thanos) pro
 
 ##ESP-8266 Schema
 
-<img src="https://github.com/slincastro/IOT-Grogu/blob/main/ESP8266-NodeMCU-kit-12-E-pinout-gpio-pin.png" width="100" height="100">
+<img src="https://github.com/slincastro/IOT-Grogu/blob/main/ESP8266-NodeMCU-kit-12-E-pinout-gpio-pin.png" >
 
 ### Prerequisites
 
