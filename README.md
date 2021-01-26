@@ -78,6 +78,6 @@ You need ampy in order to connect in realtime on esp by serial port
 
 ### Set an Alias :
 
-`alias gamora='ampy --port /dev/tty.SLAB_USBtoUART' `
+`alias grogu='ampy --port /dev/tty.SLAB_USBtoUART' `
 
-now you can use gamora instead of apmpy .....
+now you can use grogu instead of apmpy .....
