@@ -2,6 +2,9 @@
 
 Grogu is an IOT node based on [Thanos](https://github.com/slincastro/thanos) project, this was writen in micropython and designed to run in an esp8266mod.
 
+##ESP-8266 Schema
+
+![](https://github.com/slincastro/IOT-Grogu/blob/main/ESP8266-NodeMCU-kit-12-E-pinout-gpio-pin.png | width=100)
 ### Prerequisites
 
 0. Install Board Drivers for Mac [Drivers](https://www.silabs.com/products/development-tools/software/usb-to-uart-bridge-vcp-drivers)
