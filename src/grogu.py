@@ -2,6 +2,7 @@ from domain.Led import Led
 from domain.LedRGB import RGBLed
 from domain.Wifi import Wifi
 from domain.Mqtt import Mqtt
+from domain.Publisher import Publisher
 from configuration.MQTTConfiguration import MQTTConfiguration
 from configuration.Configuration import Configuration
 import machine
@@ -18,6 +19,6 @@ wifi = Wifi(configuration, rgb_led)
 
 station_connection = wifi.connect()
 
-mqtt = Mqtt(configuration, rgb_led, station_connection)
+mqtt = Publisher(configuration, rgb_led, station_connection)
 
 mqtt.connect_and_subscribe()

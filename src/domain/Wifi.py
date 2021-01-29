@@ -17,8 +17,8 @@ class Wifi:
             self.rgb_led.blink(self.rgb_led.red_led)
 
         log = Log()
-        log.write_log("IP configuration :")
-        log.write_log(str(sta_if.ifconfig()))
+        write_log("IP configuration :")
+        write_log(str(sta_if.ifconfig()))
         self.rgb_led.blink(self.rgb_led.green_led)
         return sta_if
 
