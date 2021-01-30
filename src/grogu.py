@@ -19,6 +19,6 @@ wifi = Wifi(configuration, rgb_led)
 
 station_connection = wifi.connect()
 
-mqtt = Publisher(configuration, rgb_led, station_connection)
+publisher = Publisher(configuration, rgb_led, station_connection)
 
-mqtt.publish()
+publisher.publish()
