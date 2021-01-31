@@ -14,8 +14,7 @@ class Publisher:
 
         write_log("clinetID : " + self.configuration.mqtt.client_id +
                        " server :" + self.configuration.mqtt.mqtt_server + "\n")
-        write_log("pub topic : " + self.configuration.mqtt.topic_pub + "\n")
-        write_log("pub topic : " + self.configuration.mqtt.topic_pub + "\n")
+        write_log("topic : " + self.configuration.mqtt.topic_pub + "\n")
         self.wifi_connection = wifi_connection
         self.rgb_led = rgb_led
         self.servo = Servo(14)
@@ -28,11 +27,12 @@ class Publisher:
         message = str(msg)
         self.rgb_led.blink(self.rgb_led.green_led)
         write_log("receiving message =>" + message)
+        write_log("Topic =>" + message)
 
     def publish(self):
         write_log("start connection to server")
         client = MQTTClient(self.configuration.mqtt.client_id, self.configuration.mqtt.mqtt_server)
-        write_log("setting callback")
+
         client.set_callback(self.sub_cb)
 
         retry = 0
@@ -47,7 +47,6 @@ class Publisher:
                     write_log("connecting to server ....")
                     client.publish(self.configuration.mqtt.topic_pub, msg)
 
-                    reconection = False
             except Exception as e:
                 write_log("Can't connect to mqtt..... try:" + str(retry + 1))
                 write_log(str(e))
