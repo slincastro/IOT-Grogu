@@ -52,7 +52,7 @@ class Publisher:
                 write_log(str(e))
                 self.rgb_led.blink(self.rgb_led.red_led)
             finally:
-                write_log("finish connection proccess ....")
+                write_log("finish connection to broker ....")
                 retry += 1
                 pass
             time.sleep(5)
