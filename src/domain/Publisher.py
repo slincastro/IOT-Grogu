@@ -48,7 +48,7 @@ class Publisher:
                     client.publish(self.configuration.mqtt.topic_pub, msg)
 
             except Exception as e:
-                write_log("Can't connect to Broker .....  try:" + str(retry + 1))
+                write_log("Can't connect to mqtt broker .....  try:" + str(retry + 1))
                 write_log("Direction :" + self.configuration.mqtt.mqtt_server)
                 write_log(str(e))
                 self.rgb_led.blink(self.rgb_led.red_led)
